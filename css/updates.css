@@ -8,7 +8,7 @@ body {
 
 /* ── Section ── */
 .updates-section {
-  max-width: 1300px; /* más ancho para dar espacio a las 4 columnas */
+  max-width: 1300px; 
   margin: 0 auto;
   padding: 40px 32px;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .manga-card__cover-wrap {
-  width: 100%; /* ocupa toda la celda */
+  width: 100%; 
   margin: 0 auto;
   aspect-ratio: 3 / 4;
   overflow: hidden;

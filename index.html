@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,104 +11,167 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/updates.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
     <!-- ================= NAVBAR ================= -->
 
     <header>
-      <nav class="navbar">
-        <div class="logo">
-          <dotlottie-player
-            src="assets/navbar/evangelion.lottie"
-            autoplay
-            loop
-            style="width: 55px; height: 55px"
-          >
-          </dotlottie-player>
+        <nav class="navbar">
+            <div class="logo">
+                <dotlottie-player src="assets/navbar/evangelion.lottie" autoplay loop style="width: 55px; height: 55px">
+                </dotlottie-player>
 
-          <span>MangaStore</span>
-        </div>
+                <span>MangaStore</span>
+            </div>
 
-        <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Lanzamientos</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Navegar</a></li>
-        </ul>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Lanzamientos</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Navegar</a></li>
+            </ul>
 
-        <div class="search">
-          <input type="text" placeholder="Buscar manga" />
+            <div class="search">
+                <input type="text" placeholder="Buscar manga" />
 
-          <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
 
-        <dotlottie-player
-          src="assets/navbar/noFace2_transparente.lottie"
-          autoplay
-          loop
-          style="width: 100px; height: 100px"
-        >
-        </dotlottie-player>
+            <dotlottie-player src="assets/navbar/noFace2_transparente.lottie" autoplay loop
+                style="width: 100px; height: 100px">
+            </dotlottie-player>
 
-        <dotlottie-player
-          src="assets/navbar/eso.lottie"
-          autoplay
-          loop
-          style="width: 100px; height: 100px"
-        >
-        </dotlottie-player>
+            <dotlottie-player src="assets/navbar/eso.lottie" autoplay loop style="width: 100px; height: 100px">
+            </dotlottie-player>
 
-        <div class="icons">
-          <i class="fa-regular fa-bookmark"></i>
-          <i class="fa-regular fa-user"></i>
-        </div>
-      </nav>
+            <div class="icons">
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
     </header>
 
     <!-- ================= HERO ================= -->
 
     <section class="hero">
-      <img class="hero-image" id="heroImage" />
+        <img class="hero-image" id="heroImage" />
 
-      <div class="overlay"></div>
+        <div class="overlay"></div>
 
-      <button class="arrow left">❮</button>
+        <button class="arrow left">❮</button>
 
-      <button class="arrow right">❯</button>
+        <button class="arrow right">❯</button>
 
-      <div class="card">
-        <small id="subtitle"></small>
+        <div class="card">
+            <small id="subtitle"></small>
 
-        <h1 id="title"></h1>
+            <h1 id="title"></h1>
 
-        <p id="description"></p>
+            <p id="description"></p>
 
-        <button class="buy">Comprar ahora</button>
-      </div>
+            <button class="buy">Comprar ahora</button>
+        </div>
 
-      <div class="dots"></div>
+        <div class="dots"></div>
     </section>
 
-    <!-- ================= Galeria ================= -->
+    <!-- ================= Galeria actualizados================= -->
     <section class="updates-section">
         <h2 class="section-title">Ultimas actualizaciones</h2>
         <div class="manga-grid" id="mangaGrid"></div>
         <nav class="pagination" id="pagination" aria-label="Páginas"></nav>
     </section>
 
+    <!-- ================= Footer ================= -->
+    <footer class="footer">
+
+        <div class="footer__banner">
+            <img src="assets/footer/footer.webp" alt="foto" class="footer__banner-img" />
+            <div class="footer__banner-text">
+                <h3>ÚNETE AL MUNDO MANGA</h3>
+                <p>Recibe novedades , nuevos lanzamientos y ofertas exclusivas cada semana</p>
+            </div>
+            <div class="footer__banner-form">
+                <input type="email" placeholder="Ingrese tu correo" />
+                <button>SUSCRIBIRME</button>
+            </div>
+            <div class="footer__banner-social">
+                <p>SÍGUENOS EN REDES</p>
+                <div class="footer__social-icons">
+                    <a href="#"><img src="assets/footer/logoFace.webp" alt="Facebook" /></a>
+                    <a href="#"><img src="assets/footer/logoX.png" alt="X" /></a>
+                    <a href="#"><img src="assets/footer/logoIg.webp" alt="Instagram" /></a>
+                    <a href="#"><img src="assets/footer/logoTiktok.png" alt="TikTok" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__links">
+            <div class="footer__logo">
+                <img src="assets/footer/logo_manga.gif" alt="Manga Store" />
+            </div>
+            <div class="footer__col">
+                <h4>Catálogo</h4>
+                <ul>
+                    <li><a href="#">Shonen</a></li>
+                    <li><a href="#">Seinen</a></li>
+                    <li><a href="#">Shojo</a></li>
+                    <li><a href="#">Figuras</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Tienda</h4>
+                <ul>
+                    <li><a href="#">Nuevos lanzamientos</a></li>
+                    <li><a href="#">Más vendidos</a></li>
+                    <li><a href="#">Preventas</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Colecciones</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Nosotros</h4>
+                <ul>
+                    <li><a href="#">Sobre la tienda</a></li>
+                    <li><a href="#">Blog anime</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Métodos de pago</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Tik Tok</a></li>
+                    <li><a href="#">X (Twitter)</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
+                <img src="assets/footer/akatsuki.jpg" alt="icono" />
+                <span>Para verdaderos fans del anime y del manga</span>
+            </div>
+            <span>© 2026 MangaStore. Todos los derechos reservados</span>
+        </div>
+
+    </footer>
+
     <script src="js/mangas.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/updates.js"></script>
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
-  </body>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+
 </html>
