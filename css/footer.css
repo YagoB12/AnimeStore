@@ -11,8 +11,8 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 24px 48px;
-  min-height: 160px;
+  padding: 0 24px 48px;
+  min-height: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -28,19 +28,22 @@
   z-index: 0;
   /* desvanece hacia la izquierda */
   -webkit-mask-image: linear-gradient(to left, black 0%, transparent 30%);
-mask-image: linear-gradient(to left, black 0%, transparent 30%);
+  mask-image: linear-gradient(to left, black 0%, transparent 30%);
 }
 
-.footer__banner > * {
+.footer__banner>* {
   position: relative;
   z-index: 1;
 }
 
 .footer__banner-img {
-  height: 160px;
+  width: 350px;
+  height: 230px;
+  max-width: none;
   object-fit: contain;
   flex-shrink: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+  transform: scale(4.0);
 }
 
 .footer__banner-text h3 {
@@ -125,7 +128,8 @@ mask-image: linear-gradient(to left, black 0%, transparent 30%);
 
 /* Links */
 .footer__links {
-  display: flex;
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
   align-items: flex-start;
   gap: 32px;
   padding: 40px 48px;
@@ -133,10 +137,30 @@ mask-image: linear-gradient(to left, black 0%, transparent 30%);
 }
 
 .footer__logo {
+  display: flex;
+  justify-content: flex-start;
   flex-shrink: 0;
 }
 
 .footer__logo img {
+  width: 220px;
+  object-fit: contain;
+}
+
+.footer__cols {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.footer__logo_sharingan {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.footer__logo_sharingan img {
   width: 220px;
   object-fit: contain;
 }
@@ -198,7 +222,10 @@ mask-image: linear-gradient(to left, black 0%, transparent 30%);
   }
 
   .footer__banner-img {
-    height: 120px;
+    width: 280px;
+    height: 220px;
+    max-width: none;
+    object-fit: contain;
   }
 
   .footer__banner-text p {
