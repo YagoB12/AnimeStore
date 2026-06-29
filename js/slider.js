@@ -1,6 +1,12 @@
-const slides = document.querySelectorAll(".slide");
+const heroImage = document.getElementById("heroImage");
 
-const dots = document.querySelectorAll(".dots span");
+const title = document.getElementById("title");
+
+const subtitle = document.getElementById("subtitle");
+
+const description = document.getElementById("description");
+
+const dotsContainer = document.querySelector(".dots");
 
 const next = document.querySelector(".right");
 
@@ -8,31 +14,71 @@ const prev = document.querySelector(".left");
 
 let current = 0;
 
-function showSlide(index){
+// =======================
+// Crear indicadores
+// =======================
 
-    slides.forEach(slide=>slide.classList.remove("active"));
+mangas.forEach((_, index) => {
+
+    const dot = document.createElement("span");
+
+    if(index === 0){
+
+        dot.classList.add("active");
+
+    }
+
+    dot.addEventListener("click",()=>{
+
+        current = index;
+
+        loadSlide(current);
+
+    });
+
+    dotsContainer.appendChild(dot);
+
+});
+
+const dots = document.querySelectorAll(".dots span");
+
+// =======================
+// Cargar Slide
+// =======================
+
+function loadSlide(index){
+
+    heroImage.src = mangas[index].imagen;
+
+    title.textContent = mangas[index].titulo;
+
+    subtitle.textContent = mangas[index].categoria;
+
+    description.textContent = mangas[index].descripcion;
 
     dots.forEach(dot=>dot.classList.remove("active"));
-
-    slides[index].classList.add("active");
 
     dots[index].classList.add("active");
 
 }
 
+// =======================
+
 function nextSlide(){
 
     current++;
 
-    if(current >= slides.length){
+    if(current >= mangas.length){
 
         current = 0;
 
     }
 
-    showSlide(current);
+    loadSlide(current);
 
 }
+
+// =======================
 
 function prevSlide(){
 
@@ -40,40 +86,24 @@ function prevSlide(){
 
     if(current < 0){
 
-        current = slides.length-1;
+        current = mangas.length - 1;
 
     }
 
-    showSlide(current);
+    loadSlide(current);
 
 }
 
-next.addEventListener("click",()=>{
+// =======================
 
-    nextSlide();
+next.addEventListener("click",nextSlide);
 
-});
+prev.addEventListener("click",prevSlide);
 
-prev.addEventListener("click",()=>{
+// =======================
 
-    prevSlide();
+setInterval(nextSlide,5000);
 
-});
+// =======================
 
-dots.forEach((dot,index)=>{
-
-    dot.addEventListener("click",()=>{
-
-        current=index;
-
-        showSlide(current);
-
-    });
-
-});
-
-setInterval(()=>{
-
-    nextSlide();
-
-},5000);
+loadSlide(current);
